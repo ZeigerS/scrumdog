@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="tempAttr" type="String"/>
+    <div class="slds-box">
+        {!v.tempAttr}
+        <ui:inputRadio aura:id="r0" name="pickedDiagnosis"/>
+        <span class="slds-box slds-box_x-small">10% likelihood</span>
+    </div>
+</aura:component>

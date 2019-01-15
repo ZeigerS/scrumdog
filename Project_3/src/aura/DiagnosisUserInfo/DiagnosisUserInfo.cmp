@@ -1,0 +1,4 @@
+<aura:component >
+	<p>Gender: Male</p>
+    <p>Age: 37</p>
+</aura:component>

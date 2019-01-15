@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute type="String[]" name="tempList" default="['Diagnosis1' , 'Diagnosis2', 'Diagnosis3', 'Diagnosis4']"/>
+    
+    <div class="slds-text-heading_medium slds-text-align_center"><strong>Diagnosis</strong></div>
+    <div class="slds-box">
+    <aura:iteration items="{!v.tempList}" var="temp" >
+        <div class="slds-m-vertical_x-small">
+            <c:DiagnosisDiagnosisItem tempAttr="{!temp}" />
+        </div>
+        
+    </aura:iteration>
+    </div>
+</aura:component>
