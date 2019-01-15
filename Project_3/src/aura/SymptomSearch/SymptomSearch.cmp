@@ -1,0 +1,7 @@
+<aura:component >
+    <c:SearchBar />
+    <c:SearchBarList />
+    <br />
+    <br />
+    <c:SymptomList/>
+</aura:component>

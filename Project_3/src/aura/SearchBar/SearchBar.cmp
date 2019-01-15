@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:attribute name="search" type="String" />
+    <input type="text" onkeyup="{!c.searchKeyChange}" />
+</aura:component>

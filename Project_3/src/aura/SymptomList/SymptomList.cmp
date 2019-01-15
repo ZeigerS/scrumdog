@@ -1,0 +1,10 @@
+<aura:component controller="SymptomApexController">
+    <aura:attribute name="Symptoms" type="Symptom__c[]" />
+    <aura:handler event="aura:locationChange" action="{!c.locationChange}"/>
+    
+    <aura:if isTrue="{!not(empty(v.Symptoms))}">
+        <aura:iteration items="{!v.Symptoms}" var="sym">
+            <c:SymptomItem symptomId="{!sym.Id}" />
+        </aura:iteration>
+    </aura:if>
+</aura:component>
