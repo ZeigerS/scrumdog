@@ -1,0 +1,18 @@
+<aura:component controller="DiagnosisDiagnosisApexController">
+<!-- default="{'sobjectType':'Account', 'Name':'Account123'}" -->
+    <aura:attribute type="object[]" name="diagList" />
+    
+    <!-- REMOVE ME!!!! -->
+    <aura:handler name="init" value="{!this}" action="{!c.testData}" />
+    <!-- ^^^^^^^ -->
+    
+    <div class="slds-text-heading_medium slds-text-align_center"><strong>Diagnosis</strong></div>
+    <div class="slds-box">
+    <aura:iteration items="{!v.diagList}" var="diag" >
+        <div class="slds-m-vertical_x-small">
+            <c:DiagnosisDiagnosisItem wrapperObject="{!diag}"/>
+        </div>
+        
+    </aura:iteration>
+    </div>
+</aura:component>

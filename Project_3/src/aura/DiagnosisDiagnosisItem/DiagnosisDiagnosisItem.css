@@ -1,0 +1,25 @@
+.THIS  input[type="radio"]
+{
+    
+    /*-webkit-appearance: none;
+     -moz-appearance: none;
+    content: "★";
+    font-size: 30px;
+    color:black;
+    height: 30px;
+     width: 30px;*/
+    
+     
+    /*display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: black;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;*/
+}

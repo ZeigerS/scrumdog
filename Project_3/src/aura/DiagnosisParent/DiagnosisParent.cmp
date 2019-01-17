@@ -1,0 +1,31 @@
+<aura:component >
+    <div class="slds-grid slds-grid_vertical">
+        <div class="slds-col slds-m-vertical_x-large">
+            <div class="slds-text-heading_large slds-text-align_center"><strong>Eazy-eDiagnose</strong></div>          
+        </div>
+        <div class="slds-grid slds-grid_align-center slds-grid_vertical-align-center">
+            <div class="slds-col slds-size_2-of-7">
+                <lightning:button class="slds-align_absolute-center" label="Edit Symptoms" />
+            </div>
+            <div class="slds-col slds-box slds-size_2-of-7 slds-text-align_center">
+                <c:DiagnosisUserInfo />            
+            </div>
+            <div class="slds-col slds-size_2-of-7">
+                <lightning:button class="slds-align_absolute-center" label="Profile" />
+            </div>
+        </div>
+        <div class="slds-col slds-m-vertical_x-large">
+            <div class="slds-grid slds-grid_align-center">
+                <div class="slds-col slds-m-horizontal_x-large slds-size_3-of-7">
+                    <c:DiagnosisSymptoms />
+                </div>
+                <div class="slds-col slds-m-horizontal_x-large slds-size_3-of-7">
+                    <c:DiagnosisDiagnosis />
+                </div>
+            </div>
+        </div>
+        <div class="slds-col">
+            <lightning:button class="slds-align_absolute-center" label="Submit" />
+        </div>
+    </div>
+</aura:component>

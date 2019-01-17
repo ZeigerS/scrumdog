@@ -1,0 +1,9 @@
+<aura:component controller="DiagnosisDiagnosisApexController">
+    <aura:attribute name="likePercent" type="Double"/>
+    <aura:attribute name="wrapperObject" type="object" />
+    <div class="slds-box">
+        <span>{!v.wrapperObject.diagObj.Name}</span>
+        <ui:inputRadio aura:id="r0" name="pickedDiagnosis"/>
+        <span class="slds-box slds-box_x-small">{!v.wrapperObject.diagJuncObj.Likelihood__c}% likelihood</span>
+    </div>
+</aura:component>
