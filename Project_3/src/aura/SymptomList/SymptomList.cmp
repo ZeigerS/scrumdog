@@ -1,4 +1,4 @@
-<aura:component controller="SymptomApexController">
+<aura:component controller="SymptomSearchApexController">
     <aura:attribute name="Symptoms" type="Symptom__c[]" />
     <aura:handler event="aura:locationChange" action="{!c.locationChange}"/>
     
@@ -6,5 +6,7 @@
         <aura:iteration items="{!v.Symptoms}" var="sym">
             <c:SymptomItem symptomId="{!sym.Id}" />
         </aura:iteration>
+        <br />
+        <lightning:button variant="destructive" label="Diagnose" title="Diagnose" onclick="{! c.sendSymptoms }"/>
     </aura:if>
 </aura:component>

@@ -1,9 +1,10 @@
-<aura:component controller="SymptomApexController">
-    <aura:attribute name="symptoms" type="Symptom__c[]" />
-    <!--aura:handler name="init" value="{!this}" action="{!c.doInit}" /-->
+<aura:component controller="SymptomSearchApexController">
+    <aura:attribute name="currentSymptoms" type="Symptom__c[]" />
+    <aura:attribute name="masterSymptoms" type="Symptom__c[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:handler event="c:SearchKeyChange" action="{!c.searchKeyChange}" />
-    
-    <aura:iteration items="{!v.symptoms}" var="sym">
+     
+    <aura:iteration items="{!v.currentSymptoms}" var="sym">
         <a href="{! '#symptom__c/' + sym.Id }" >
             <p>{!sym.Name}</p>
         </a>

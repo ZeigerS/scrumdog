@@ -20,5 +20,16 @@
             });
             $A.enqueueAction(action);
         }
+	},
+	
+	sendSymptoms : function(component, event, helper){
+		var action = component.get("c.infermedicaCall");
+		action.setParams({
+			"syms": component.get("v.Symptoms"),
+		});
+		action.setCallback(function(response){
+		
+		});
+		$A.enqueueAction(action);
 	}
 })
