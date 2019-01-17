@@ -1,4 +1,4 @@
-<aura:component controller="SelfRegistrationApexController">
+<aura:component controller="SelfRegistrationApexController" implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute type="String" name="userEmail" />
     <aura:attribute type="Date" name="userBirthdate" />
     <aura:attribute type="String" name="userSex" />

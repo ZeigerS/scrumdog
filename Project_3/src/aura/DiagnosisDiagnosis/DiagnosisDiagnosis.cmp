@@ -1,4 +1,4 @@
-<aura:component controller="DiagnosisDiagnosisApexController">
+<aura:component controller="DiagnosisDiagnosisApexController" implements="forceCommunity:availableForAllPageTypes" access="global">
 <!-- default="{'sobjectType':'Account', 'Name':'Account123'}" -->
     <aura:attribute type="object[]" name="diagList" />
     

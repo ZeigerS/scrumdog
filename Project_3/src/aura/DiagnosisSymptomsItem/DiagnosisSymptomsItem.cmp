@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute name="tempAttr" type="String"/>
 	<span>
     	{!v.tempAttr}

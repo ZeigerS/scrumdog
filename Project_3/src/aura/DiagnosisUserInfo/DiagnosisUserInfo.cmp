@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute name="userContact" type="Object" />
 	<p>Sex: {!v.userContact.Sex__c}</p>
     <p>Age: {!v.userContact.Age__c}</p>

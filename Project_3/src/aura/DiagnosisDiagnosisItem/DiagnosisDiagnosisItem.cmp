@@ -1,4 +1,4 @@
-<aura:component controller="DiagnosisDiagnosisApexController">
+<aura:component controller="DiagnosisDiagnosisApexController" implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute name="likePercent" type="Double"/>
     <aura:attribute name="wrapperObject" type="object" />
     <div class="slds-box">

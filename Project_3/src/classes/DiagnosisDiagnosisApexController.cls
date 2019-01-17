@@ -24,7 +24,7 @@ public class DiagnosisDiagnosisApexController
         return returnList;
     }
     
-    
+    /*
 	public class DiagnosisListItemWrapper 
     {
         @AuraEnabled public Diagnosis_Search_Junc__c diagJuncObj {get; set;}
@@ -41,4 +41,5 @@ public class DiagnosisDiagnosisApexController
             this.diagObj = diagObj;
         }
     }
+*/
 }

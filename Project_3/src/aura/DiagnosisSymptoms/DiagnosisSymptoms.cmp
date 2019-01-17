@@ -1,4 +1,4 @@
-<aura:component >
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute type="String[]" name="tempList" default="['Symptom1' , 'Symptom2', 'Symptom3']"/>
     
     <div class="slds-text-heading_medium slds-text-align_center"><strong>Symptoms</strong></div>

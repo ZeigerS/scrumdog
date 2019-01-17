@@ -1,10 +1,10 @@
-public class SelfRegistrationApexController 
+public without sharing class SelfRegistrationApexController 
 {
     @AuraEnabled
 	public static Boolean apexRegUser(String userSex, String userEmail, Date userBirthdate)
     {
-        try
-        {
+        //try
+        //{
             Contact userContact = new Contact();
             userContact.LastName = userEmail;
             userContact.Sex__c = userSex;
@@ -37,15 +37,15 @@ public class SelfRegistrationApexController
             }
             
             insert newUser;
-        }
-        catch(DMLException e)
-        {
-            return false;
-        }
-        catch(QueryException e)
-        {
-            return false;
-        }
+        //}
+        //catch(DMLException e)
+        //{
+        //    return false;
+        //}
+        //catch(QueryException e)
+        //{
+        //    return false;
+        //}
         
         return true;
     }
