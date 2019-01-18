@@ -7,25 +7,33 @@
 			Chosen : checkbox 
 				default value=unchecked
 			
-    @AuraEnabled public Diagnosis__c diagObj {get; set;} -->
+    @AuraEnabled public Diagnosis__c diagObj {get; set;} 
+    		Description : Text Area (Long)
+				Length = 500
+				# of visible lines = 4 -->
+    		
 <aura:attribute name="wrapperObject" type="object" />
 
 	<div class="slds-grid slds-grid_vertical">
     	<div class="slds-col">
-        	header
+    	<!-- header -->
+        	<c:DetailsHeader diagName="{!v.wrapperObject.diagObj.Name}"/>
         </div>
         <div class="slds-col">
 	        <div class="slds-grid ">
 	        	<div class="slds-col slds-size_1-of-2">
-	        	description
+	        	<!-- description -->
+	        	<c:DetailsDescription detailDesc="{!v.wrapperObject.diagObj.Description__c}"/>
 	        	</div>
 	        	<div class="slds-col slds-size_1-of-2">
-	        	symptoms
+	        	<!-- symptoms -->
+	        	<c:DetailsSymptoms />
 	        	</div>
 	        </div>
         </div>
         <div class="slds-col slds-align_absolute-center">
-        	remedies
+        	<!-- remedies -->
+        	<c:DetailsRemedies />
         </div>
     </div>
 </aura:component>

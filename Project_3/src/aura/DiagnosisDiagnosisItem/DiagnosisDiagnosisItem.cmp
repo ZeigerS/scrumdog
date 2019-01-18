@@ -1,9 +1,45 @@
 <aura:component controller="DiagnosisDiagnosisApexController" implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute name="likePercent" type="Double"/>
     <aura:attribute name="wrapperObject" type="object" />
-    <div class="slds-box">
+    <aura:attribute name="trueToModal" type="boolean" default="false"/>
+    
+    
+    <div class="slds-box" onclick="{!c.myClickEvent}">
         <span>{!v.wrapperObject.diagObj.Name}</span>
         <ui:inputRadio aura:id="r0" name="pickedDiagnosis"/>
         <span class="slds-box slds-box_x-small">{!v.wrapperObject.diagJuncObj.Likelihood__c}% likelihood</span>
     </div>
+    
+    <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                       <!-- <c:DetailsParent /> -->
+                        <p><b>The goal of this blog is to provide tips and tricks/workarounds for salesforce developer and admins.
+                            Many of us face the same issues and have the same questions when using and implementing Salesforce.
+                            As a community of users and developers, it is important for us to share our experiences.
+                            I try to reach out to other users and help the Salesforce community in general.
+                            Much of this blog will focus on Lightning(code &amp; config.) but I will also
+                            cover some of the more basic topics in salesforce.
+                            </b>
+                        </p>
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{! c.closeModal }"/>
+                        <lightning:button variant="brand" 
+                                          label="Close"
+                                          title="Close"
+                                          onclick="{! c.closeModal }"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+    
 </aura:component>

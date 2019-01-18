@@ -1,3 +1,4 @@
 <aura:component >
-	
+	<aura:attribute name="diagName" type="String"/>
+	{!v.diagName}
 </aura:component>

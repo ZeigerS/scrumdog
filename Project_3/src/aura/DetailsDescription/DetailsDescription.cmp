@@ -1,3 +1,4 @@
 <aura:component >
-	
+	<aura:attribute name="detailDesc" type="String" />
+	{!v.detailDesc}
 </aura:component>

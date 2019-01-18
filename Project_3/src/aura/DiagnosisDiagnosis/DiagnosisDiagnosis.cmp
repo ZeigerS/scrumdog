@@ -6,6 +6,7 @@
     <aura:handler name="init" value="{!this}" action="{!c.testData}" />
     <!-- ^^^^^^^ -->
     
+    
     <div class="slds-text-heading_medium slds-text-align_center"><strong>Diagnosis</strong></div>
     <div class="slds-box">
     <aura:iteration items="{!v.diagList}" var="diag" >
