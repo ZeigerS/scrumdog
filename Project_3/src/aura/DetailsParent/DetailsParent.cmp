@@ -1,0 +1,31 @@
+<aura:component >
+
+<!-- @AuraEnabled public Diagnosis_Search_Junc__c diagJuncObj {get; set;}
+			Likelihood : percent field
+				length=3 
+				decimal places=2
+			Chosen : checkbox 
+				default value=unchecked
+			
+    @AuraEnabled public Diagnosis__c diagObj {get; set;} -->
+<aura:attribute name="wrapperObject" type="object" />
+
+	<div class="slds-grid slds-grid_vertical">
+    	<div class="slds-col">
+        	header
+        </div>
+        <div class="slds-col">
+	        <div class="slds-grid ">
+	        	<div class="slds-col slds-size_1-of-2">
+	        	description
+	        	</div>
+	        	<div class="slds-col slds-size_1-of-2">
+	        	symptoms
+	        	</div>
+	        </div>
+        </div>
+        <div class="slds-col slds-align_absolute-center">
+        	remedies
+        </div>
+    </div>
+</aura:component>
