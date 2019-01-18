@@ -3,6 +3,7 @@
     <types>
         <members>DiagnosisDiagnosisApexController</members>
         <members>DiagnosisListItemWrapper</members>
+        <members>DiagnosisSymptomsApexController</members>
         <name>ApexClass</name>
     </types>
     <types>

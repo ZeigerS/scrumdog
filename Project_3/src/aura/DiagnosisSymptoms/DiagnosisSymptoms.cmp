@@ -1,12 +1,16 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
-    <aura:attribute type="String[]" name="tempList" default="['Symptom1' , 'Symptom2', 'Symptom3']"/>
+<aura:component controller="DiagnosisSymptomsApexController">
+    <aura:attribute type="String[]" name="symptomsList" default="[]"/>
     
-    <div class="slds-text-heading_medium slds-text-align_center"><strong>Symptoms</strong></div>
+    <lightning:input type="text" aura:id="searchRecord" label="Input a search record's ID to see its symptoms." value="SN-0"/>
+    <lightning:button label="Click to run the test" onclick="{!c.getSymptomNames}"/>
+    <div class="slds-text-heading_medium slds-text-align_center">
+        <strong>Symptoms</strong>
+    </div>
     <div class="slds-box">
-    <aura:iteration items="{!v.tempList}" var="temp" >
-        <span class="slds-m-vertical_x-small slds-m-horizontal_x-small">
-            <c:DiagnosisSymptomsItem tempAttr="{!temp}" />
-        </span>
-    </aura:iteration>
-        </div>
+        <aura:iteration aura:id="symptomsOutputIteration" items="{!v.symptomsList}" var="symptom">
+            <span class="slds-m-vertical_x-small slds-m-horizontal_x-small">
+                {!symptom}
+            </span>
+        </aura:iteration>
+    </div>
 </aura:component>
