@@ -60,7 +60,22 @@
         <trackTrending>false</trackTrending>
         <type>Summary</type>
     </fields>
+    <fields>
+        <fullName>sID__c</fullName>
+        <externalId>false</externalId>
+        <label>sID</label>
+        <length>10</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
     <label>Symptom</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Symptom Name</label>
         <type>Text</type>

@@ -1,0 +1,15 @@
+<aura:component >
+    <div class="slds-grid slds-grid_vertical">
+        <div class="slds-col">
+            <span>    
+                <c:SearchBar />
+                <c:SearchBarList />
+            </span>
+        </div>
+        <div class="slds-col">
+            <span>
+                <c:SymptomList/>
+            </span>
+        </div>
+    </div>    
+</aura:component>
