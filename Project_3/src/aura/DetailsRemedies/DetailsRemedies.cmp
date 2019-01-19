@@ -1,3 +1,10 @@
 <aura:component >
+	<aura:attribute name="remList" type="Remedy__c[]" description="" />
+	
+	<aura:iteration items="{!v.remList}" var="rem">
+		<div class="slds-m-vertical_x-small">
+            {!rem.Name}
+        </div>
+	</aura:iteration>
 	
 </aura:component>

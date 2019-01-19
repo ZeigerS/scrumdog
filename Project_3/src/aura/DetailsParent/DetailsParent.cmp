@@ -15,9 +15,9 @@
 <aura:attribute name="wrapperObject" type="object" />
 
 	<div class="slds-grid slds-grid_vertical">
-    	<div class="slds-col">
+    	<div class="slds-col slds-border_bottom">
     	<!-- header -->
-        	<c:DetailsHeader diagName="{!v.wrapperObject.diagObj.Name}"/>
+        	<c:DetailsHeader diagName="{!v.wrapperObject.diagObj.Name}" percentLikely="{!v.wrapperObject.diagJuncObj.Likelihood__c"/>
         </div>
         <div class="slds-col">
 	        <div class="slds-grid ">

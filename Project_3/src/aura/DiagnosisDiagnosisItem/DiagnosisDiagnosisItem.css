@@ -23,3 +23,11 @@
      margin-right: 7px;
      outline: none;*/
 }
+
+.THIS .modalClass
+{
+	width: 80%; 
+	margin-left: auto; 
+	margin-right: auto;
+	margin-top: 40px;
+}
