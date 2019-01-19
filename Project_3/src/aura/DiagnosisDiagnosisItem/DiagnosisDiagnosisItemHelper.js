@@ -24,16 +24,16 @@
       //$A.enqueueAction(action);
 	
 	
-		var upRecord = component.get("v.wrapperObject");
+		var upRecord = component.get("v.wrapperObject.diagJuncObj");
 		
-		if(!upRecord.diagJuncObj.Chosen__c)
+		if(!upRecord.Chosen__c)
 		{
-			upRecord.diagJuncObj.Chosen__c = true;
+			upRecord.Chosen__c = true;
 			
 			var serverCall = component.get("c.setToChosen");
 			
 			serverCall.setParams({
-				"myWrapper" : upRecord
+				"myJuncObj" : upRecord
 			});
 			
 			serverCall.setCallback(this, function(serverResponse){

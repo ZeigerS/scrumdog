@@ -17,7 +17,7 @@
 	<div class="slds-grid slds-grid_vertical">
     	<div class="slds-col slds-border_bottom">
     	<!-- header -->
-        	<c:DetailsHeader diagName="{!v.wrapperObject.diagObj.Name}" percentLikely="{!v.wrapperObject.diagJuncObj.Likelihood__c"/>
+        	<c:DetailsHeader diagName="{!v.wrapperObject.diagObj.Name}"/>
         </div>
         <div class="slds-col">
 	        <div class="slds-grid ">
