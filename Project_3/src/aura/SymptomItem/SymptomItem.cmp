@@ -1,4 +1,4 @@
 <aura:component >
 	<aura:attribute name="symptomId" type="Id" />
-	<force:recordView recordId="{!v.symptomId}" type="MINI" />
+    <force:recordView recordId="{!v.symptomId}"/>
 </aura:component>

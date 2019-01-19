@@ -1,4 +1,5 @@
 <aura:component >
-    <aura:attribute name="search" type="String" />
-    <input type="text" onkeyup="{!c.searchKeyChange}" />
+    <aura:attribute name="search" type="String"/>
+    <aura:handler event="c:sendingSymptomEvent" action="{!c.clearSearch}" />
+    <input type="text" onkeyup="{!c.searchKeyChange}" value="{!v.search}"/>
 </aura:component>

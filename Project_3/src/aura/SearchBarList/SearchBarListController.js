@@ -11,4 +11,13 @@
         var searchKey = event.getParam("searchKey");
         component.set("v.currentSymptoms", helper.getDisplaySymptom(component, searchKey));
     },
+    
+    changeList : function(component, event, helper){
+    	if(event.getParam("removingSymptom")){
+    		helper.removeSymptom(component, event.getParam("newSymptom"));
+    	}
+    	else{
+    		helper.addSymptom(component, event.getParam("newSymptom"));
+    	}
+    },
 })

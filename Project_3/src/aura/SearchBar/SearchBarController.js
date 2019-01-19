@@ -5,5 +5,10 @@
             "searchKey":event.target.value
         });
         myEvent.fire();
+    },
+    
+    clearSearch : function(component, event, helper){
+    	var emptyString = "";
+    	component.set("v.search", emptyString);
     }
 })
