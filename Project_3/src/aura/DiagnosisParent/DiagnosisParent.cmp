@@ -1,0 +1,26 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+<aura:attribute name="symptomList" type="Symptom__c[]" />
+<aura:attribute name="diagWrapperList" type="object[]" />
+<aura:attribute name="currentContact" type="Contact" />
+
+<aura:registerEvent name="fromDiagnosis" type="c:SendToSearch" />
+
+    <div class="slds-grid slds-grid_vertical">
+        
+        <div class="slds-grid slds-grid_align-center slds-grid_vertical-align-center">
+            <div class="slds-col slds-size_2-of-7">
+                <lightning:button class="slds-align_absolute-center" label="Edit Symptoms" onclick="{!c.sendToSearch}"/>
+            </div>
+        </div>
+        <div class="slds-col slds-m-vertical_x-large">
+            <div class="slds-grid slds-grid_align-center">
+                <div class="slds-col slds-m-horizontal_x-large slds-size_3-of-7">
+                    <c:DiagnosisSymptoms />
+                </div>
+                <div class="slds-col slds-m-horizontal_x-large slds-size_3-of-7">
+                    <c:DiagnosisDiagnosis diagWrapperList="{!v.diagWrapperList}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

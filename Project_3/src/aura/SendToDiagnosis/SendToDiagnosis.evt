@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="Event template" >
+    <aura:attribute name="symptomList" type="Symptom__c[]" />
+    <aura:attribute name="diagWrapperList" type="object[]" />
+</aura:event>

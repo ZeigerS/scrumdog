@@ -1,0 +1,11 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+	<aura:attribute name="symptomList" type="Symptom__c[]" />
+	<aura:attribute name="currentContact" type="Contact" />
+
+    <c:SearchBar />
+    <c:SearchBarList oldSymptoms="{!v.symptomList}"/>
+    <br />
+    <br />
+    <c:SymptomList Symptoms="{!v.symptomList}" currentContact="{!v.currentContact}"/>  
+    
+</aura:component>

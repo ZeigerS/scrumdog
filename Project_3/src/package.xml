@@ -17,7 +17,38 @@
         <name>StaticResource</name>
     </types>
     <types>
-        <members>*</members>
+        <members>DetailsDescription</members>
+        <members>DetailsHeader</members>
+        <members>DetailsParent</members>
+        <members>DetailsParentApp</members>
+        <members>DetailsRemedies</members>
+        <members>DetailsSymptoms</members>
+        <members>DiagnosisDiagnosis</members>
+        <members>DiagnosisDiagnosisItem</members>
+        <members>DiagnosisDiagnosisItemClickEvent</members>
+        <members>DiagnosisParent</members>
+        <members>DiagnosisParentApp</members>
+        <members>DiagnosisSymptoms</members>
+        <members>DiagnosisSymptomsItem</members>
+        <members>DiagnosisUserInfo</members>
+        <members>eDiagnose</members>
+        <members>eDiagnoseHeader</members>
+        <members>forgotPassword</members>
+        <members>loginForm</members>
+        <members>ProfileModal</members>
+        <members>SearchBar</members>
+        <members>SearchBarList</members>
+        <members>SearchKeyChange</members>
+        <members>selfRegister</members>
+        <members>SelfRegistration</members>
+        <members>sendingSymptomEvent</members>
+        <members>SendToDiagnosis</members>
+        <members>SendToSearch</members>
+        <members>setExpId</members>
+        <members>setStartUrl</members>
+        <members>SymptomItem</members>
+        <members>SymptomList</members>
+        <members>SymptomSearch</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
@@ -27,6 +58,10 @@
     <types>
         <members>*</members>
         <name>ApexComponent</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomObject</name>
     </types>
     <version>38.0</version>
 </Package>

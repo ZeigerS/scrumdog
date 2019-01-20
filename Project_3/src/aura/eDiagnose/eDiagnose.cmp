@@ -1,0 +1,27 @@
+<aura:component controller="eDiagnoseApexController" implements="forceCommunity:availableForAllPageTypes" access="global">
+	<aura:attribute name="renderButtons" type="Boolean" default="false" />
+	<aura:attribute name="symptomList" type="Symptom__c[]" />
+	<aura:attribute name="diagWrapperList" type="object[]" />
+	<aura:attribute name="currentContact" type="Contact" />
+	<aura:attribute name="trueForSearch" type="boolean" default="true"/>
+	
+	<aura:handler name="fromDiagnosis" event="c:SendToSearch" action="{!c.sendToSearch}"/>
+	<aura:handler name="fromSearch" event="c:SendToDiagnosis" action="{!c.sendToDiagnosis}"/>
+	
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+	
+	<div class="slds-grid slds-grid_vertical">
+		<div class="slds-col">
+            <c:eDiagnoseHeader currentContact="{!v.currentContact}" renderButtons="{!v.renderButtons}" />
+        </div>
+        <div class="slds-col">
+            <aura:if isTrue="{!v.trueForSearch}" >
+				<c:SymptomSearch symptomList="{!v.symptomList}" currentContact="{!v.currentContact}"/>
+				<aura:set attribute="else">
+					<c:DiagnosisParent symptomList="{!v.symptomList}" diagWrapperList="{!v.diagWrapperList}" currentContact="{!v.currentContact}"/>
+				</aura:set>
+			</aura:if>
+        </div>
+	</div>
+	
+</aura:component>

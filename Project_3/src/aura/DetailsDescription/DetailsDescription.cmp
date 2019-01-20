@@ -1,0 +1,11 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+	<aura:attribute name="detailDesc" type="String" />
+	<div class="slds-text-heading_small">
+		Description of Diagnosis
+	</div>
+	<div>
+		{!v.detailDesc}
+		dummy data dsfldsjf sdflj ldf;jd;lfkj eoipruqewpr vnpwopei dvnopwien
+		wonfpewin pewonfwe slf;kjdfwofn nfdnnjfelibfu wifbuefi iwbefiew fbwe bfweifbwe f
+	</div>
+</aura:component>

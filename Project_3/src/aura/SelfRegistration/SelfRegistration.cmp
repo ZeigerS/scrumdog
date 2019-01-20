@@ -1,0 +1,18 @@
+<aura:component controller="SelfRegistrationApexController" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute type="String" name="userEmail" />
+    <aura:attribute type="Date" name="userBirthdate" />
+    <aura:attribute type="String" name="userSex" default="Male"/>
+    <aura:attribute type="Boolean" name="disableBool" default="true"/>
+    
+    <lightning:input type="email" value="{!v.userEmail}" label="Email Address" required="true" onchange="{!c.checkValid}"/>
+    <lightning:input type="date" value="{!v.userBirthdate}" label="Birth Date" required="true" onchange="{!c.checkValid}"/>
+    <lightning:select aura:id="sexPick" label="Sex" required="true" onchange="{!c.checkValid}" value="{!v.userSex}">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </lightning:select>
+    <div class="slds-align_absolute-center">
+        <lightning:button label="Back" />
+        <lightning:button label="Register" onclick="{!c.registerUser}" disabled="{!v.disableBool}"/>
+    </div>
+    
+</aura:component>

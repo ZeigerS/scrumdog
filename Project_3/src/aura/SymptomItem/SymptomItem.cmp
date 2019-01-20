@@ -1,0 +1,4 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+	<aura:attribute name="symptomId" type="Id" />
+    <force:recordView recordId="{!v.symptomId}"/>
+</aura:component>

@@ -1,0 +1,11 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+	<aura:attribute name="diagName" type="String"/>
+	<aura:attribute name="percentLikely" type="Double"/>
+	
+	<div class="slds-text-heading_large">
+	{!v.diagName}
+	</div>
+	<div>
+	{!v.percentLikely}% Likelihood
+	</div>
+</aura:component>

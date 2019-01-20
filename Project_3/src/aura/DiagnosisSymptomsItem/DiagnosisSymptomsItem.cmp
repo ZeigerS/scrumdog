@@ -1,0 +1,6 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="tempAttr" type="String"/>
+	<span>
+    	{!v.tempAttr}
+    </span>
+</aura:component>

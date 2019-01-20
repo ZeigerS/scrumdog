@@ -1,0 +1,85 @@
+<aura:component controller="TestController" implements="forceCommunity:availableForAllPageTypes">
+	<aura:attribute name="renderButtons" type="Boolean" default="false" />
+	<aura:attribute name="currentContact" type="Contact" />
+	<aura:attribute name="trueForRegister" type="Boolean" default="false" />
+	<aura:attribute name="trueForLogin" type="Boolean" default="false" />
+	
+	<div class="slds-grid">
+		<div class="slds-col">
+		<img src="{!$Resource.logo}" width="150"/>
+            <lightning:button class="slds-align_absolute-center" label="toggle" onclick="{!c.toggleCon}"/>
+        </div>
+    	<div class="slds-col">
+           <div class="slds-text-heading_large slds-text-align_center"><strong>Eazy-eDiagnose</strong></div>          
+        </div>
+    	<div class="slds-col">
+    	<aura:if isTrue="{!v.renderButtons}">
+            <aura:if isTrue="{!v.currentContact == null}">
+            	<lightning:button class="" label="Log in" onclick="{!c.toggleLogin}"/>
+            	<lightning:button class="" label="Create Account" onclick="{!c.toggleRegister}"/>
+            
+            	<aura:set attribute="else" >
+            		<lightning:button class="slds-align_absolute-center" label="Profile" />
+            	</aura:set>
+            </aura:if>
+        </aura:if>
+        </div>
+    	
+    </div>
+    
+    <aura:if isTrue="{!v.trueForRegister}" >
+    	<!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                
+                <!-- class="slds-modal__container" -->
+                <div class="slds-modal__container">
+                    
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                       <c:SelfRegistration />
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer slds-modal__footer_directional">
+                        <lightning:button variant="neutral" 
+                                          label="Close"
+                                          title="Close"
+                                          onclick="{!c.toggleRegister}"/>
+                        <lightning:button variant="brand" 
+                                          label="Pick"
+                                          title="Pick"
+                                          onclick=""/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+    </aura:if>
+    <aura:if isTrue="{!v.trueForLogin}" >
+    	<!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                
+                <!-- class="slds-modal__container" -->
+                <div class="slds-modal__container">
+                    
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                       <c:loginForm />
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer slds-modal__footer_directional">
+                        <lightning:button variant="neutral" 
+                                          label="Close"
+                                          title="Close"
+                                          onclick="{!c.toggleLogin}"/>
+                        <lightning:button variant="brand" 
+                                          label="Pick"
+                                          title="Pick"
+                                          onclick=""/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+    </aura:if>
+    
+</aura:component>
