@@ -4,6 +4,8 @@
     <aura:attribute type="String" name="userSex" default="Male"/>
     <aura:attribute type="Boolean" name="disableBool" default="true"/>
     
+    <aura:registerEvent name="toggleSelfRegister" type="c:SendBooleanEvent" />
+    <!-- 
     <lightning:input type="email" value="{!v.userEmail}" label="Email Address" required="true" onchange="{!c.checkValid}"/>
     <lightning:input type="date" value="{!v.userBirthdate}" label="Birth Date" required="true" onchange="{!c.checkValid}"/>
     <lightning:select aura:id="sexPick" label="Sex" required="true" onchange="{!c.checkValid}" value="{!v.userSex}">
@@ -14,5 +16,34 @@
         <lightning:button label="Back" />
         <lightning:button label="Register" onclick="{!c.registerUser}" disabled="{!v.disableBool}"/>
     </div>
+    -->
+    
+    
+    <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                
+                <!-- class="slds-modal__container" -->
+                <div class="slds-modal__container">
+                    
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                       <lightning:input type="email" value="{!v.userEmail}" label="Email Address" required="true" onchange="{!c.checkValid}"/>
+    					<lightning:input type="date" value="{!v.userBirthdate}" label="Birth Date" required="true" onchange="{!c.checkValid}"/>
+    					<lightning:select aura:id="sexPick" label="Sex" required="true" onchange="{!c.checkValid}" value="{!v.userSex}">
+        					<option value="Male">Male</option>
+        					<option value="Female">Female</option>
+    					</lightning:select>
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer slds-modal__footer_directional">
+                    	<div class="slds-align_absolute-center">
+        					<lightning:button label="Back" />
+        					<lightning:button label="Register" onclick="{!c.registerUser}" disabled="{!v.disableBool}"/>
+    					</div>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
     
 </aura:component>

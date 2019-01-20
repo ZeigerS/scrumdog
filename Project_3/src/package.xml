@@ -49,6 +49,7 @@
         <members>SymptomItem</members>
         <members>SymptomList</members>
         <members>SymptomSearch</members>
+        <members>SendBooleanEvent</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
