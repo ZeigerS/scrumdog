@@ -52,5 +52,29 @@
 			component.set("v.trueForRegister",true);
 		}
 	
+	},
+	
+	toggleProfile : function(component, event, helper){
+		if(component.get("v.trueForProfile") === true)
+		{
+			component.set("v.trueForProfile",false);
+		}
+		else
+		{
+			component.set("v.trueForProfile",true);
+			console.log("profile boolean set to " + component.get("v.trueForProfile"));
+		}
+	},
+	
+	closeRegistration : function(component, event, helper){
+		component.set("v.trueForRegister", false);
+	},
+	
+	closeLogin : function(component, event, helper){
+		component.set("v.trueForLogin", false);
+	},
+	
+	closeProfile : function(component, event, helper){
+		component.set("v.trueForProfile", false);
 	}
 })

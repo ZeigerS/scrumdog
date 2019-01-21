@@ -1,5 +1,5 @@
 ({
-	regUser : function(component) {
+	regUser : function(component, event) {
 	    //component.set("v.userSex", component.find("sexPick").get("v.value"));
         var serverCall = component.get("c.apexRegUser");
         
@@ -33,7 +33,8 @@
                     "type" : "success"
                 });
                 resultsToast.fire();
-                            
+                
+                this.closeModal(component, event);            
             }
             else
             {
@@ -73,5 +74,11 @@
         	console.log("set to true");
         	component.set("v.disableBool", true);
         }
+	},
+	
+	closeModal : function(component, event){
+		var myEvent = component.getEvent("toggleSelfRegister");
+		
+		myEvent.fire();
 	}
 })

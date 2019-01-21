@@ -13,11 +13,12 @@
 				# of visible lines = 4 -->
     		
 <aura:attribute name="wrapperObject" type="object" />
+<aura:attribute name="symptomList" type="object[]" />
 
 	<div class="slds-grid slds-grid_vertical">
     	<div class="slds-col slds-border_bottom">
     	<!-- header -->
-        	<c:DetailsHeader diagName="{!v.wrapperObject.diagObj.Name}"/>
+        	<c:DetailsHeader percentLikely="{!v.wrapperObject.diagJuncObj.Likelihood__c}" diagName="{!v.wrapperObject.diagObj.Name}"/>
         </div>
         <div class="slds-col">
 	        <div class="slds-grid ">
@@ -27,13 +28,13 @@
 	        	</div>
 	        	<div class="slds-col slds-size_1-of-2">
 	        	<!-- symptoms -->
-	        	<c:DetailsSymptoms />
+	        	<c:DetailsSymptoms symptomList="{!v.symptomList}"/>
 	        	</div>
 	        </div>
         </div>
-        <div class="slds-col slds-align_absolute-center">
+        <div class="slds-col">
         	<!-- remedies -->
-        	<c:DetailsRemedies />
+        	<c:DetailsRemedies remedyString="{!v.wrapperObject.diagObj.Remedies__c}"/>
         </div>
     </div>
 </aura:component>

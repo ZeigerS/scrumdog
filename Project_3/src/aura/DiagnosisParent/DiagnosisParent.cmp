@@ -18,7 +18,7 @@
                     <c:DiagnosisSymptoms />
                 </div>
                 <div class="slds-col slds-m-horizontal_x-large slds-size_3-of-7">
-                    <c:DiagnosisDiagnosis diagWrapperList="{!v.diagWrapperList}"/>
+                    <c:DiagnosisDiagnosis diagWrapperList="{!v.diagWrapperList}" symptomList="{!v.symptomList}"/>
                 </div>
             </div>
         </div>

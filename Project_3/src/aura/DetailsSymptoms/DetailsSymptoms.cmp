@@ -1,3 +1,11 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes">
+	<aura:attribute name="symptomList" type="object[]" />
+	
+	<aura:iteration items="{!v.symptomList}" var="sym" >
+        <div>
+            {!sym.Name}
+        </div>
+        
+    </aura:iteration>
 	
 </aura:component>

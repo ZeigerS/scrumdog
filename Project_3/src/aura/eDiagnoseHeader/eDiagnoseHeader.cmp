@@ -3,6 +3,11 @@
 	<aura:attribute name="currentContact" type="Contact" />
 	<aura:attribute name="trueForRegister" type="Boolean" default="false" />
 	<aura:attribute name="trueForLogin" type="Boolean" default="false" />
+	<aura:attribute name="trueForProfile" type="Boolean" default="false" />
+	
+	<aura:handler name="toggleSelfRegister" event="c:SendBooleanEvent" action="{!c.closeRegistration}" />
+	<aura:handler name="toggleProfile" event="c:SendBooleanEvent" action="{!c.closeProfile}" />
+	<aura:handler name="toggleLogin" event="c:SendBooleanEvent" action="{!c.closeLogin}" />
 	
 	<div class="slds-grid">
 		<div class="slds-col">
@@ -19,7 +24,7 @@
             	<lightning:button class="" label="Create Account" onclick="{!c.toggleRegister}"/>
             
             	<aura:set attribute="else" >
-            		<lightning:button class="slds-align_absolute-center" label="Profile" />
+            		<lightning:button class="slds-align_absolute-center" label="Profile" onclick="{!c.toggleProfile}"/>
             	</aura:set>
             </aura:if>
         </aura:if>
@@ -27,35 +32,15 @@
     	
     </div>
     
+    <aura:if isTrue="{!v.trueForProfile}" >
+    	<c:ProfileModal currentContact="{!v.currentContact}" />
+    </aura:if>
+    
     <aura:if isTrue="{!v.trueForRegister}" >
     	<c:SelfRegistration />
     </aura:if>
     <aura:if isTrue="{!v.trueForLogin}" >
-    	<!--###### MODAL BOX Start######--> 
-            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
-                
-                <!-- class="slds-modal__container" -->
-                <div class="slds-modal__container">
-                    
-                    <!--###### MODAL BOX BODY Part Start######-->
-                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-                       <c:loginForm />
-                    </div>
-                    <!--###### MODAL BOX FOOTER Part Start ######-->
-                    <footer class="slds-modal__footer slds-modal__footer_directional">
-                        <lightning:button variant="neutral" 
-                                          label="Close"
-                                          title="Close"
-                                          onclick="{!c.toggleLogin}"/>
-                        <lightning:button variant="brand" 
-                                          label="Pick"
-                                          title="Pick"
-                                          onclick=""/>
-                    </footer>
-                </div>
-            </section>
-            <div class="slds-backdrop slds-backdrop_open"></div>
-            <!--###### MODAL BOX Part END Here ######-->
+    	<c:loginForm />
     </aura:if>
     
 </aura:component>

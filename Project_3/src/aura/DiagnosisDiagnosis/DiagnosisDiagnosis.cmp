@@ -1,12 +1,13 @@
 <aura:component controller="DiagnosisDiagnosisApexController" implements="forceCommunity:availableForAllPageTypes" access="global">
 <!-- default="{'sobjectType':'Account', 'Name':'Account123'}" -->
     <aura:attribute type="object[]" name="diagWrapperList" />
+    <aura:attribute name="symptomList" type="object[]" />
     
     <div class="slds-text-heading_medium slds-text-align_center"><strong>Diagnosis</strong></div>
     <div class="slds-box">
     <aura:iteration items="{!v.diagWrapperList}" var="diag" >
         <div class="slds-m-vertical_x-small">
-            <c:DiagnosisDiagnosisItem wrapperObject="{!diag}"/>
+            <c:DiagnosisDiagnosisItem wrapperObject="{!diag}" symptomList="{!v.symptomList}"/>
         </div>
         
     </aura:iteration>

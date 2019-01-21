@@ -18,13 +18,14 @@ public class SymptomSearchApexController {
         string payload = getPayload(syms, con);
         request.setBody(payload);
         HttpResponse response = http.send(request);
+        system.debug(response.toString());
         if(response.getStatusCode() == 200){
             String jsonInput = response.getBody();
             Map<String, Object> m = (Map<String, Object>) JSON.deserializeUntyped(jsonInput);
             system.debug('Deserialized json: ' + m);
             List<Object> lo = (List<Object>) m.get('conditions');
             system.debug('Hopefully a list of conditions: ' + lo);
-            List<Diagnosis__c> master = [SELECT id, name, cID__c from Diagnosis__c];
+            List<Diagnosis__c> master = [SELECT id, name, cID__c, Description__c, Remedies__c from Diagnosis__c];
             List<Diagnosis__c> current = new List<Diagnosis__c>();
             for(Object o : lo){
                 Map<String, Object> thisDiag = (Map<String, Object>) o;
@@ -61,11 +62,12 @@ public class SymptomSearchApexController {
         }
         else{
             retVal += '{"sex":"';
-            retVal += con.Sex__c;
+            retVal += con.Sex__c.toLowerCase();
             retVal += '","age":"';
             retVal += con.age__c;
             retVal += '","evidence":[';
         }
+        system.debug('Payload: ' + retVal);
         for(symptom__c sym : syms){
             retVal += '{"id":"';
             retVal += sym.sID__c;
@@ -78,11 +80,11 @@ public class SymptomSearchApexController {
     
     public class diagnosisWrapper{
         Diagnosis__c thisDiag;
-        Double prob;
+        Decimal prob;
         
-        public diagnosisWrapper(Diagnosis__c thisDiag, Double prob){
+        public diagnosisWrapper(Diagnosis__c thisDiag, Decimal prob){
             this.thisDiag = thisDiag;
-            this.prob = 100 * prob;
+            this.prob = (100 * prob).setScale(2);
         }
     }
 

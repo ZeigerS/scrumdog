@@ -7,7 +7,7 @@ public class searchHistoryApexController {
 		List<Search__c> currentSearched = [select id, CreatedDate,
 						(select Chosen__c, Diagnosis__c, Likelihood__c, CreatedDate from Diagnosis_Search_Juncs__r order by chosen__c desc),
 						(select Symptom__c from Symptom_Search_Juncs__r)
-		 				from Search__c where CreatedById = :userId order by CreatedDate DESC];
+		 				from Search__c where CreatedById = :userId order by CreatedDate DESC limit 10];
 		Set<Id> diagIds = new Set<Id>();
 		Set<Id> symIds = new Set<Id>();
 		for(Search__c s : currentSearched){
@@ -17,9 +17,9 @@ public class searchHistoryApexController {
 			for(Symptom_Search_Junc__c ssj : s.Symptom_Search_Juncs__r){
 				symIds.add(ssj.Symptom__c);
 			}
-		}
-		List<Diagnosis__c> currentSearchedDiagnosis = [Select id, name from Diagnosis__c where id IN :diagIds];
-		List<Symptom__c> currentSearchedSymptom = [SELECT id, name FROM Symptom__c WHERE id IN :symIds];
+		} 
+		List<Diagnosis__c> currentSearchedDiagnosis = [Select id, name, cId__c, Description__c, Remedies__c from Diagnosis__c where id IN :diagIds];
+		List<Symptom__c> currentSearchedSymptom = [SELECT id, name, sId__c FROM Symptom__c WHERE id IN :symIds];
 		Map<Id, Diagnosis__c> diagMap = new Map<Id, Diagnosis__c>();
 		Map<Id, Symptom__c> symMap = new Map<Id, Symptom__c>();
 		for(Diagnosis__c d : currentSearchedDiagnosis){

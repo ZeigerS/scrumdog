@@ -61,6 +61,14 @@
         <visibleLines>4</visibleLines>
     </fields>
     <fields>
+        <fullName>Remedies__c</fullName>
+        <externalId>false</externalId>
+        <label>Remedies</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
         <fullName>cID__c</fullName>
         <externalId>false</externalId>
         <label>cID</label>

@@ -13,7 +13,7 @@
     registerUser : function(component, event, helper){
         //var action = component.get("c.newCaseDB");
         
-        helper.regUser(component);
+        helper.regUser(component, event);
         
         
     },
@@ -24,5 +24,9 @@
         console.log("userSex: " + component.get("v.userSex"));
     	console.log("in controller");
     	helper.chkValid(component);
+    },
+    
+    closeModal : function(component, event, helper){
+    	helper.closeModal(component, event);
     }
 })

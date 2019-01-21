@@ -1,6 +1,7 @@
 <aura:component controller="DiagnosisDiagnosisItemApexController" implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute name="likePercent" type="Double"/>
     <aura:attribute name="wrapperObject" type="object" />
+    <aura:attribute name="symptomList" type="object[]" />
     <aura:attribute name="trueToModal" type="boolean" default="false"/>
     
     
@@ -18,7 +19,7 @@
                     
                     <!--###### MODAL BOX BODY Part Start######-->
                     <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-                       <c:DetailsParent wrapperObject="{!v.wrapperObject}"/>
+                       <c:DetailsParent wrapperObject="{!v.wrapperObject}" symptomList="{!v.symptomList}"/>
                     </div>
                     <!--###### MODAL BOX FOOTER Part Start ######-->
                     <footer class="slds-modal__footer slds-modal__footer_directional">

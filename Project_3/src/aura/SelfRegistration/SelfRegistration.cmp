@@ -37,7 +37,7 @@
                     <!--###### MODAL BOX FOOTER Part Start ######-->
                     <footer class="slds-modal__footer slds-modal__footer_directional">
                     	<div class="slds-align_absolute-center">
-        					<lightning:button label="Back" />
+        					<lightning:button label="Back" onclick="{!c.closeModal}"/>
         					<lightning:button label="Register" onclick="{!c.registerUser}" disabled="{!v.disableBool}"/>
     					</div>
                     </footer>
