@@ -1,6 +1,8 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes">
 	<aura:attribute name="symptomList" type="object[]" />
-	
+	<div class="slds-text-heading_small">
+		Selected Symptoms
+	</div>
 	<aura:iteration items="{!v.symptomList}" var="sym" >
         <div>
             {!sym.Name}

@@ -1,2 +1,7 @@
-.THIS {
+.THIS .secondaryButton
+{
+	background-color: white;
+	color: #1d2fa9;
+	font-weight: bold;
+	border: 1px solid gray;
 }

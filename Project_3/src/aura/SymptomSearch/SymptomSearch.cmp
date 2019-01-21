@@ -1,26 +1,30 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes">
-	<aura:attribute name="symptomList" type="Symptom__c[]" />
-	<aura:attribute name="currentContact" type="Contact" />
-    <div class="slds-box" aura:id="outerBox">
+    <aura:attribute name="symptomList" type="Symptom__c[]" />
+    <aura:attribute name="currentContact" type="Contact" />
     
-    	<div class="slds-grid slds-gutters">
-  			<div class="slds-col slds-size_1-of-2">
-    			<div class="slds-text-heading_medium slds-text-align_center">
-    				<strong>Enter Symptoms </strong>
-    				<br />
-    				<div class="slds-border_right slds-border_bottom slds-border_left">
-    					<c:SearchBar />
-    					<c:SearchBarList oldSymptoms="{!v.symptomList}"/>
-    				</div>
-				</div>
-  			</div>
-  			<div class="slds-col slds-size_1-of-2">
-    			<div class="slds-text-heading_medium ">
-    				<div class="slds-box">
-    					<c:SymptomList Symptoms="{!v.symptomList}" currentContact="{!v.currentContact}"/>  
-    				</div>
-    	 		</div>
-  			</div>
-		</div>
-     </div>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-2">
+            <div class="setTo80">
+                <div class="slds-text-heading_medium slds-text-align_center">
+                    <strong>Enter Symptoms</strong>
+                    <br />
+                    <br />
+                    <div class="slds-border_right slds-border_bottom slds-border_left">
+                        <c:SearchBar />
+                        <c:SearchBarList oldSymptoms="{!v.symptomList}"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-col slds-size_1-of-2">
+            <div class="setTo80">
+                <div class="slds-text-heading_medium slds-text-align_center">
+                    <strong>Selected Symptoms</strong>
+                    <div class="slds-box">
+                        <c:SymptomList Symptoms="{!v.symptomList}" currentContact="{!v.currentContact}"/>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </aura:component>

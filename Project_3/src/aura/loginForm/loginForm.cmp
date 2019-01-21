@@ -28,9 +28,20 @@
     <aura:handler event="c:setExpId" action="{!c.setExpId}"/>    
     <aura:dependency resource="c:setExpId" type="EVENT"/>  
     
+    
+    
     <div>
         <aura:renderIf isTrue="{!v.isUsernamePasswordEnabled}">
-            <span>
+    <!--###### MODAL BOX Start######--> 
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                
+                <!-- class="slds-modal__container" -->
+                <div class="slds-modal__container">
+                    
+                    <!--###### MODAL BOX BODY Part Start######-->
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                       
+                       <span>
                 <aura:renderIf isTrue="{!v.showError}">
                     <div id="error">
                         <ui:outputRichText value="{!v.errorMessage}"/>
@@ -46,17 +57,30 @@
                 <span id="sfdc_lock" class="login-icon sfdc" data-icon="c"></span>
                 <ui:inputSecret value="" aura:id="password" placeholder="{!v.passwordLabel}" keyup="{!c.onKeyUp}" class="input sfdc_passwordinput sfdc" label="{!v.passwordLabel}" labelClass="assistiveText"/>
             </div>
-    
-            <div class="sfdc">
-                <ui:button aura:id="submitButton" label="{!v.loginButtonLabel}" press="{!c.handleLogin}" class="sfdc_button"/>
-            </div>
-            
-            <div id="sfdc_forgot" class="sfdc">
+                       
+                       <div id="sfdc_forgot" class="sfdc">
                 <span><a href="{!if(v.communityForgotPasswordUrl == null, v.forgotPasswordUrl, v.communityForgotPasswordUrl)}">{!v.forgotPasswordLabel}</a></span>
                 <aura:renderIf isTrue="{!v.isSelfRegistrationEnabled}">
                     <span style="float:right" ><a href="{!if(v.communitySelfRegisterUrl == null, v.selfRegisterUrl, v.communitySelfRegisterUrl)}">{!v.selfRegisterLabel}</a></span>
                 </aura:renderIf>                            
             </div> 
+                    </div>
+                    <!--###### MODAL BOX FOOTER Part Start ######-->
+                    <footer class="slds-modal__footer slds-modal__footer_directional">
+                    	<div class="sfdc">
+                <ui:button aura:id="submitButton" label="{!v.loginButtonLabel}" press="{!c.handleLogin}" class="sfdc_button"/>
+            </div>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+            <!--###### MODAL BOX Part END Here ######-->
+    
+    
         </aura:renderIf>
     </div>
+    
+    
+    
+    
 </aura:component>

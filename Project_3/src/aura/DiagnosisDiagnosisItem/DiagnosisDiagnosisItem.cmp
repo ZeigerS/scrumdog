@@ -5,7 +5,7 @@
     <aura:attribute name="trueToModal" type="boolean" default="false"/>
     
     <div>
-    <div class="slds-p-around_small myClickBox slds-grid" onclick="{!c.myClickEvent}">
+    <div class="slds-p-around_small myClickBox slds-grid slds-box" onclick="{!c.myClickEvent}">
         <div class="slds-text-align_left slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
         	{!v.wrapperObject.diagObj.Name}
         </div>
@@ -27,15 +27,17 @@
                        <c:DetailsParent wrapperObject="{!v.wrapperObject}" symptomList="{!v.symptomList}"/>
                     </div>
                     <!--###### MODAL BOX FOOTER Part Start ######-->
-                    <footer class="slds-modal__footer slds-modal__footer_directional">
-                        <lightning:button variant="neutral" 
+                    <footer class="slds-modal__footer">
+                    <div class="slds-align_absolute-center">
+                        <lightning:button class="secondaryButton"
                                           label="Close"
                                           title="Close"
                                           onclick="{! c.closeModal }"/>
-                        <lightning:button variant="brand" 
+                        <lightning:button class="primaryButton" 
                                           label="Pick"
                                           title="Pick"
                                           onclick="{! c.updateChosen }"/>
+                    </div>
                     </footer>
                 </div>
             </section>

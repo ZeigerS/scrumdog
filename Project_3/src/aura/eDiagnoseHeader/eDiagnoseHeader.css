@@ -10,16 +10,17 @@
 	font-weight:bold;
 }
 
-.THIS .diagButton
+.THIS .headerButton
 {
 	background-color: #1d2fa9;
 	color: #5cc2f2;
-	border: 0px solid #1d2fa9;
+	font-weight: bold;
+	border: 0px solid gray;
 }
 
 .THIS .headerColumnRight
 {
-	padding-top: 70px;
+	padding-top: 80px;
 }
 
 .THIS .headerColumnCenter

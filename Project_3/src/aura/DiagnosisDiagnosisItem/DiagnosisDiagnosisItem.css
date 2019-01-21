@@ -10,5 +10,25 @@
 {
 	cursor: pointer !important;
 	color: white;
-	border: 2px solid #1d2fa9;
+	font-weight: bold;
+	border: 1px solid gray;
+	
+	background-color: #5cc2f2;
+	
+}
+
+.THIS .primaryButton
+{
+	background-color: #1d2fa9;
+	color: white;
+	font-weight: bold;
+	border: 0px solid gray;
+}
+
+.THIS .secondaryButton
+{
+	background-color: white;
+	color: #1d2fa9;
+	font-weight: bold;
+	border: 1px solid gray;
 }

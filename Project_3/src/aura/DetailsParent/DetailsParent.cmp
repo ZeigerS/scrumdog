@@ -16,12 +16,12 @@
 <aura:attribute name="symptomList" type="object[]" />
 
 	<div class="slds-grid slds-grid_vertical">
-    	<div class="slds-col slds-border_bottom">
+    	<div class="slds-col slds-border_bottom slds-m-bottom_x-small">
     	<!-- header -->
         	<c:DetailsHeader percentLikely="{!v.wrapperObject.diagJuncObj.Likelihood__c}" diagName="{!v.wrapperObject.diagObj.Name}"/>
         </div>
         <div class="slds-col">
-	        <div class="slds-grid ">
+	        <div class="slds-grid slds-gutters_x-small slds-p-vertical_small">
 	        	<div class="slds-col slds-size_1-of-2">
 	        	<!-- description -->
 	        	<c:DetailsDescription detailDesc="{!v.wrapperObject.diagObj.Description__c}"/>

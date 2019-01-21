@@ -19,6 +19,8 @@
         <br />
         <br />
         <br />
-        <lightning:button class="diagnoseBtn" label="Diagnose" title="Diagnose" onclick="{!c.sendSymptoms}"/>
+        <div>
+        	<lightning:button class="diagnoseBtn" label="Diagnose" title="Diagnose" onclick="{!c.sendSymptoms}"/>
+        </div>
     </aura:if>
 </aura:component>
