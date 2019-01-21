@@ -1,2 +1,12 @@
-.THIS {
+.THIS 
+{
+	background-color: white;
+}
+
+.THIS .diagIteration
+{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #5cc2f2;
 }

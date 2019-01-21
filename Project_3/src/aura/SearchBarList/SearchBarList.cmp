@@ -2,13 +2,17 @@
 	<aura:attribute name="oldSymptoms" type="Symptom__c[]" />
     <aura:attribute name="currentSymptoms" type="Symptom__c[]" />
     <aura:attribute name="masterSymptoms" type="Symptom__c[]" />
+    
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:handler event="c:SearchKeyChange" action="{!c.searchKeyChange}" />
     <aura:handler event="c:sendingSymptomEvent" action="{!c.changeList}" />
     
+   
     <aura:iteration items="{!v.currentSymptoms}" var="sym">
-        <a href="{! '#symptom__c/' + sym.Id }" >
-            <p>{!sym.Name}</p>
-        </a>
+    	<div class="slds-border_top">
+        	<a href="{! '#symptom__c/' + sym.Id }" >
+            	<p>{!sym.Name}</p>
+        	</a>
+    	</div>
     </aura:iteration>
 </aura:component>

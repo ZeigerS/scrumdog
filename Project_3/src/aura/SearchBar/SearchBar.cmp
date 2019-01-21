@@ -1,5 +1,7 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes">
     <aura:attribute name="search" type="String"/>
     <aura:handler event="c:sendingSymptomEvent" action="{!c.clearSearch}" />
-    <input type="text" onkeyup="{!c.searchKeyChange}" value="{!v.search}"/>
+    <div>
+    	<input type="text" onkeyup="{!c.searchKeyChange}" value="{!v.search}"/>
+    </div>
 </aura:component>

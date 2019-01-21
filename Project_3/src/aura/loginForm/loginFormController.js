@@ -66,5 +66,11 @@
         }
         var attributes = { url: selfRegUrl };
         $A.get("e.force:navigateToURL").setParams(attributes).fire();
-    } 
+    },
+    
+    closeModal : function(component, event, helper){
+		var myEvent = component.getEvent("toggleLogin");
+		
+		myEvent.fire();
+	} 
 })

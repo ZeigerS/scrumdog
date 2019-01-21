@@ -1,2 +1,28 @@
-.THIS {
+.THIS 
+{
+	background-color: #5cc2f2;
+}
+
+.THIS .siteHeader
+{
+	color: #1d2fa9;
+	font-size: 50px;
+	font-weight:bold;
+}
+
+.THIS .diagButton
+{
+	background-color: #1d2fa9;
+	color: #5cc2f2;
+	border: 0px solid #1d2fa9;
+}
+
+.THIS .headerColumnRight
+{
+	padding-top: 70px;
+}
+
+.THIS .headerColumnCenter
+{
+	padding-top: 50px;
 }

@@ -10,24 +10,26 @@
 	<aura:handler name="toggleLogin" event="c:SendBooleanEvent" action="{!c.closeLogin}" />
 	
 	<div class="slds-grid">
-		<div class="slds-col">
-		<img src="{!$Resource.logo}" width="150"/>
-            <lightning:button class="slds-align_absolute-center" label="toggle" onclick="{!c.toggleCon}"/>
+		<div class="slds-col slds-size_1-of-4">
+			<img class="slds-p-left_medium"  src="{!$Resource.logo}" width="200"/>
+			<lightning:button class="slds-align_absolute-center" label="toggle" onclick="{!c.toggleCon}"/>
         </div>
-    	<div class="slds-col">
-           <div class="slds-text-heading_large slds-text-align_center"><strong>Eazy-eDiagnose</strong></div>          
+    	<div class="slds-col slds-size_2-of-4 headerColumnCenter">
+           <div class="siteHeader slds-text-align_center"><strong>Eazy-eDiagnose</strong></div>          
         </div>
-    	<div class="slds-col">
+    	<div class="slds-col  slds-size_1-of-4 headerColumnRight">
+    	<div class="slds-align_absolute-center" >
     	<aura:if isTrue="{!v.renderButtons}">
             <aura:if isTrue="{!v.currentContact == null}">
-            	<lightning:button class="" label="Log in" onclick="{!c.toggleLogin}"/>
-            	<lightning:button class="" label="Create Account" onclick="{!c.toggleRegister}"/>
+            	<lightning:button class="diagButton" label="Log in" onclick="{!c.toggleLogin}"/>
+            	<lightning:button class="diagButton" label="Create Account" onclick="{!c.toggleRegister}"/>
             
             	<aura:set attribute="else" >
-            		<lightning:button class="slds-align_absolute-center" label="Profile" onclick="{!c.toggleProfile}"/>
+            		<lightning:button class="diagButton" label="Profile" onclick="{!c.toggleProfile}"/>
             	</aura:set>
             </aura:if>
         </aura:if>
+        </div>
         </div>
     	
     </div>

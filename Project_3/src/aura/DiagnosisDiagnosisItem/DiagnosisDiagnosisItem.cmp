@@ -4,11 +4,16 @@
     <aura:attribute name="symptomList" type="object[]" />
     <aura:attribute name="trueToModal" type="boolean" default="false"/>
     
-    
-    <div class="slds-box" onclick="{!c.myClickEvent}">
-        <span>{!v.wrapperObject.diagObj.Name}</span>
+    <div>
+    <div class="slds-p-around_small myClickBox slds-grid" onclick="{!c.myClickEvent}">
+        <div class="slds-text-align_left slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+        	{!v.wrapperObject.diagObj.Name}
+        </div>
         <!-- <ui:inputRadio aura:id="r0" name="pickedDiagnosis"/> -->
-        <span class="slds-box slds-box_x-small">{!v.wrapperObject.diagJuncObj.Likelihood__c}% likelihood</span>
+        <div class=" slds-text-align_right slds-col slds-size_1-of-2 slds-p-horizontal_x-small">
+        	{!v.wrapperObject.diagJuncObj.Likelihood__c}% likelihood
+        </div>
+    </div>
     </div>
     <aura:if isTrue="{!v.trueToModal}">
     <!--###### MODAL BOX Start######--> 
