@@ -64,7 +64,7 @@
 }
 
 .THIS  input {
-    margin-left:10px;
+    
     margin-top: 3px;
     border: 0px solid transparent;
     width: 70%;
@@ -100,4 +100,9 @@
 	color: #1d2fa9;
 	font-weight: bold;
 	border: 1px solid gray;
+}
+
+.THIS .lineSpace
+{
+	height: 5px;
 }

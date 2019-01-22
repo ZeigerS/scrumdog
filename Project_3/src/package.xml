@@ -50,6 +50,8 @@
         <members>SymptomList</members>
         <members>SymptomSearch</members>
         <members>SendBooleanEvent</members>
+        <members>SearchHistory</members>
+        <members>topTenSymptoms</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
