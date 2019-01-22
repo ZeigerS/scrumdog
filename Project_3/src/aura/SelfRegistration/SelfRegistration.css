@@ -1,0 +1,21 @@
+.THIS .primaryButton
+{
+	background-color: #1d2fa9;
+	color: white;
+	font-weight: bold;
+	border: 0px solid gray;
+}
+
+.THIS .secondaryButton
+{
+	background-color: white;
+	color: #1d2fa9;
+	font-weight: bold;
+	border: 1px solid gray;
+}
+
+.THIS .primaryButton[disabled]
+{
+	color: rgb(217, 219, 221);
+	background-color: rgb(255, 255, 255);
+}

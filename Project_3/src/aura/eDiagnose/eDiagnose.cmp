@@ -27,6 +27,6 @@
         <a href="https://infermedica.com/">Powered By Infermedica</a>
     </div>
     <div>
-        <img src="{!$Resource.banner}" width="1500" class="banner"/>
+        <img src="{!$Resource.banner2}" width="1500" class="banner"/>
     </div>
 </aura:component>

@@ -11,6 +11,7 @@
 	
 	updateChosen : function(component, event, helper){
 		helper.updateChosen(component);
+		component.set("v.trueToModal", false);
 	}
 	
 })

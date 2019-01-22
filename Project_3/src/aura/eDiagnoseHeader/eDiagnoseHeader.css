@@ -1,4 +1,4 @@
-.THIS 
+.THIS .headerBackground
 {
 	background-color: #5cc2f2;
 }
@@ -20,7 +20,7 @@
 
 .THIS .headerColumnRight
 {
-	padding-top: 140px;
+	padding-top: 88px;
 	display: flex;
     justify-content: right;
 }

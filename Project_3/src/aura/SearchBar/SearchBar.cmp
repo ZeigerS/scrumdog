@@ -2,6 +2,6 @@
     <aura:attribute name="search" type="String"/>
     <aura:handler event="c:sendingSymptomEvent" action="{!c.clearSearch}" />
     <div>
-    	<input type="text" onkeyup="{!c.searchKeyChange}" value="{!v.search}"/>
+    	<input class="hideMitchStuff" type="text" onkeyup="{!c.searchKeyChange}" value="{!v.search}"/>
     </div>
 </aura:component>

@@ -10,10 +10,10 @@
                     <br />
                     <br />
                     <div class="mitchContainer">
-                    <div class="slds-border_right slds-border_bottom slds-border_left">
-                        <c:SearchBar />
-                        <c:SearchBarList oldSymptoms="{!v.symptomList}"/>
-                    </div>
+                        <div class="slds-border_right slds-border_bottom slds-grid_align-center slds-border_left">
+                            <c:SearchBar />
+                            <c:SearchBarList oldSymptoms="{!v.symptomList}"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -22,6 +22,8 @@
             <div class="setTo80">
                 <div class="slds-text-heading_medium slds-text-align_center">
                     <strong>Selected Symptoms</strong>
+                    <br />
+                    <br />
                     <div class="slds-box">
                         <c:SymptomList Symptoms="{!v.symptomList}" currentContact="{!v.currentContact}"/>  
                     </div>
@@ -29,5 +31,9 @@
             </div>
         </div>
     </div>
-    <c:topTenSymptoms />
+    <div class="slds-grid slds-grid_align-center">
+        <div class="slds-col slds-size_1-of-3 setTo20" >
+            <c:topTenSymptoms />
+        </div>
+    </div>
 </aura:component>

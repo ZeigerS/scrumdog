@@ -8,14 +8,16 @@
 	<aura:handler name="toggleSelfRegister" event="c:SendBooleanEvent" action="{!c.closeRegistration}" />
 	<aura:handler name="toggleProfile" event="c:SendBooleanEvent" action="{!c.closeProfile}" />
 	<aura:handler name="toggleLogin" event="c:SendBooleanEvent" action="{!c.closeLogin}" />
-	
+	<div class="headerBackground">
 	<div class="slds-grid slds-grid_align-center">
 		<div class="slds-col slds-size_1-of-5">
 		<!-- <img class="slds-p-left_medium"  src="{!$Resource.logo}" width="200"/> -->
-		 	 <lightning:button class="slds-align_absolute-center" label="toggle" onclick="{!c.toggleCon}"/> 
+		 	<!--  <lightning:button class="slds-align_absolute-center" label="toggle" onclick="{!c.toggleCon}"/> -->
         </div>
     	<div class="slds-col slds-size_2-of-5 headerColumnCenter">
-    	<img class="slds-p-left_medium slds-align_absolute-center"  src="{!$Resource.logo}" width="300"/>
+    	<a href="https://ediagnosis-developer-edition.na85.force.com/ediagnose/s/">
+    	<img class="slds-p-left_medium slds-align_absolute-center"  src="{!$Resource.logo2}" width="300"/>
+        </a> 
           <!--  <div class="siteHeader slds-text-align_center"><strong>Eazy-eDiagnose</strong></div>     -->     
         </div>
     	<div class="slds-col  slds-size_1-of-5 headerColumnRight">
@@ -35,7 +37,7 @@
         </div>
     	
     </div>
-    
+    </div>
     <aura:if isTrue="{!v.trueForProfile}" >
     	<c:ProfileModal currentContact="{!v.currentContact}" />
     </aura:if>

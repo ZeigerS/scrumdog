@@ -1,5 +1,5 @@
 .THIS .slds-box {
-	margin : 25px;
+    
 	background-color : white;
 }
 .THIS{
@@ -7,6 +7,12 @@
 }
 .THIS .setTo80{
     width:80%;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.THIS .setTo20{
+    width:20%;
     margin-right:auto;
     margin-left:auto;
 }
