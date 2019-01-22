@@ -23,10 +23,10 @@
             </aura:if>
         </div>
     </div>
-    <div>
-        <img src="{!$Resource.banner}" width="1500" class="banner"/>
-    </div>
     <div class="slds-p-horizontal_medium">
         <a href="https://infermedica.com/">Powered By Infermedica</a>
+    </div>
+    <div>
+        <img src="{!$Resource.banner}" width="1500" class="banner"/>
     </div>
 </aura:component>

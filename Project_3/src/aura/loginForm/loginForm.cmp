@@ -28,6 +28,8 @@
     <aura:handler event="c:setExpId" action="{!c.setExpId}"/>    
     <aura:dependency resource="c:setExpId" type="EVENT"/>  
     
+    <aura:registerEvent name="toggleLogin" type="c:SendBooleanEvent" />
+    
     
     
     <div>
@@ -67,8 +69,9 @@
                     </div>
                     <!--###### MODAL BOX FOOTER Part Start ######-->
                     <footer class="slds-modal__footer slds-modal__footer_directional">
-                    	<div class="sfdc">
-                <ui:button aura:id="submitButton" label="{!v.loginButtonLabel}" press="{!c.handleLogin}" class="sfdc_button"/>
+                    	<div class="sfdc slds-align_absolute-center">
+                <lightning:button class="secondaryButton" label="Close" onclick="{!c.closeModal}" />
+                <lightning:button class="primaryButton" aura:id="submitButton" label="{!v.loginButtonLabel}" onclick="{!c.handleLogin}"/>
             </div>
                     </footer>
                 </div>

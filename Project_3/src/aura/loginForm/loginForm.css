@@ -70,13 +70,10 @@
 }
 
 .THIS  button:hover {
-    background-color:#3276b1;
-    border-color:#285e8e;
     cursor:pointer;
 }
 
 .THIS button .label {
-    color: #fff;	
 }
 
 .THIS  input {
@@ -100,4 +97,20 @@
 
 .THIS label.uiLabel-hidden {
     display:none;
+}
+
+.THIS .primaryButton
+{
+	background-color: #1d2fa9;
+	color: white;
+	font-weight: bold;
+	border: 0px solid gray;
+}
+
+.THIS .secondaryButton
+{
+	background-color: white;
+	color: #1d2fa9;
+	font-weight: bold;
+	border: 1px solid gray;
 }

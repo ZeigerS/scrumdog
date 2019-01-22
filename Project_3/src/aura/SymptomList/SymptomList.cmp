@@ -7,20 +7,20 @@
     
     <aura:if isTrue="{!not(empty(v.Symptoms))}">
         <aura:iteration items="{!v.Symptoms}" var="sym" indexVar="i">
-        <span>
-        <span class="slds-pill slds-m-right_medium slds-m-bottom_small">
-                <span class="slds-pill__label">{!sym.Name}</span>
-                <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="X"
-                        onclick="{!c.removeSym}" data-index="{!i}" style="color=red">X
-                </button>
-            </span>
-        </span> 
+            <span>
+                <span class="slds-pill slds-m-right_medium slds-m-bottom_small">
+                    <span class="slds-pill__label">{!sym.Name}</span>
+                    <button class="slds-button slds-button_icon slds-button_icon slds-pill__remove" title="X"
+                            onclick="{!c.removeSym}" data-index="{!i}" style="color=red">X
+                    </button>
+                </span>
+            </span> 
         </aura:iteration>
         <br />
         <br />
         <br />
         <div>
-        	<lightning:button class="diagnoseBtn" label="Diagnose" title="Diagnose" onclick="{!c.sendSymptoms}"/>
+            <lightning:button class="diagnoseBtn" label="Diagnose" title="Diagnose" onclick="{!c.sendSymptoms}"/>
         </div>
     </aura:if>
 </aura:component>

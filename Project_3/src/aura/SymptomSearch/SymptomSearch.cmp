@@ -9,9 +9,11 @@
                     <strong>Enter Symptoms</strong>
                     <br />
                     <br />
+                    <div class="mitchContainer">
                     <div class="slds-border_right slds-border_bottom slds-border_left">
                         <c:SearchBar />
                         <c:SearchBarList oldSymptoms="{!v.symptomList}"/>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -27,4 +29,5 @@
             </div>
         </div>
     </div>
+    <c:topTenSymptoms />
 </aura:component>

@@ -9,16 +9,18 @@
 	<aura:handler name="toggleProfile" event="c:SendBooleanEvent" action="{!c.closeProfile}" />
 	<aura:handler name="toggleLogin" event="c:SendBooleanEvent" action="{!c.closeLogin}" />
 	
-	<div class="slds-grid">
-		<div class="slds-col slds-size_1-of-4">
-			<img class="slds-p-left_medium"  src="{!$Resource.logo}" width="200"/>
-			<lightning:button class="slds-align_absolute-center" label="toggle" onclick="{!c.toggleCon}"/>
+	<div class="slds-grid slds-grid_align-center">
+		<div class="slds-col slds-size_1-of-5">
+		<!-- <img class="slds-p-left_medium"  src="{!$Resource.logo}" width="200"/> -->
+		 	 <lightning:button class="slds-align_absolute-center" label="toggle" onclick="{!c.toggleCon}"/> 
         </div>
-    	<div class="slds-col slds-size_2-of-4 headerColumnCenter">
-           <div class="siteHeader slds-text-align_center"><strong>Eazy-eDiagnose</strong></div>          
+    	<div class="slds-col slds-size_2-of-5 headerColumnCenter">
+    	<img class="slds-p-left_medium slds-align_absolute-center"  src="{!$Resource.logo}" width="300"/>
+          <!--  <div class="siteHeader slds-text-align_center"><strong>Eazy-eDiagnose</strong></div>     -->     
         </div>
-    	<div class="slds-col  slds-size_1-of-4 headerColumnRight">
-    	<div class="slds-align_absolute-center" >
+    	<div class="slds-col  slds-size_1-of-5 headerColumnRight">
+    	<!-- slds-align_absolute-center -->
+    	<div class="headerButtonGroup" >
     	<aura:if isTrue="{!v.renderButtons}">
             <aura:if isTrue="{!v.currentContact == null}">
             	<lightning:button class="headerButton" label="Log in" onclick="{!c.toggleLogin}"/>
