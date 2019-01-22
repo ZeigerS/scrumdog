@@ -1,0 +1,17 @@
+.THIS .slds-box {
+	margin : 25px;
+	background-color : white;
+}
+.THIS{
+	background-color:#5cc2f2;
+}
+.THIS .setTo80{
+    width:80%;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.THIS .mitchContainer
+{
+	min-height: 170px;
+}

@@ -50,14 +50,14 @@
                     </div>
                 </aura:renderIf>
             </span>            
-            <div id="sfdc_username_container" class="sfdc">
+            <div id="sfdc_username_container">
                 <span id="sfdc_user" class="login-icon" data-icon="a"></span>
-                <ui:inputText value="" aura:id="username" placeholder="{!v.usernameLabel}" keyup="{!c.onKeyUp}" class="input sfdc_usernameinput sfdc" label="{!v.usernameLabel}" labelClass="assistiveText"/>
-            </div>
+                 <ui:inputText value="" aura:id="username" label="Username" keyup="{!c.onKeyUp}" class="input sfdc_usernameinput sfdc" />
+           	</div>
     
-            <div id="sfdc_password_container" class="sfdc">
+            <div id="sfdc_password_container">
                 <span id="sfdc_lock" class="login-icon sfdc" data-icon="c"></span>
-                <ui:inputSecret value="" aura:id="password" placeholder="{!v.passwordLabel}" keyup="{!c.onKeyUp}" class="input sfdc_passwordinput sfdc" label="{!v.passwordLabel}" labelClass="assistiveText"/>
+               <ui:inputSecret value="" aura:id="password" label="Password" keyup="{!c.onKeyUp}" class="input sfdc_passwordinput sfdc" />
             </div>
                        
                        <div id="sfdc_forgot" class="sfdc">

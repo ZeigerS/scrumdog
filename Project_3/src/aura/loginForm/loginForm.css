@@ -1,11 +1,4 @@
 .THIS #sfdc_username_container{
-    margin-bottom:10px;
-    padding: 12px;
-    background-color:white;
-    border: 1px solid #CCC;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
 }
 
 .THIS #sfdc_user{
@@ -37,12 +30,6 @@
 }
 
 .THIS #sfdc_password_container{
-    padding: 12px;
-    background-color:white;
-    border: 1px solid #CCC;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
 }
 
 .THIS  button.sfdc_button {

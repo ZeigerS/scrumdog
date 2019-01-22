@@ -1,0 +1,14 @@
+<aura:component controller="searchHistoryApexController" implements="forceCommunity:availableForAllPageTypes">
+	<aura:attribute type="object[]" name="megaWrapperList" />
+	<aura:attribute type="object[]" name="displayList" />
+	<aura:attribute type="list" name="columns" />
+	
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+	<aura:registerEvent name="fromSearch" type="c:SendToDiagnosis" />
+	<aura:registerEvent name="toggleProfile" type="c:SendBooleanEvent"/>
+	
+	<lightning:datatable data="{! v.displayList }"
+        columns="{! v.columns }"
+        keyField="id"
+        onrowselection="{! c.goToSearch }"/>
+</aura:component>

@@ -1,0 +1,12 @@
+<aura:component controller="EnterSymptomsCommonSearchApexController">
+    <aura:attribute name="symList" Type="Symptom__c[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.getsymptomQuery}"/>
+    <h1 class="slds-page-header__title slds-m-right_small slds-align_absolute-center"  title="Most Common Symptoms">Most Common Symptoms</h1> 
+    <aura:iteration items="{!v.symList}" var="sym" indexVar="index">
+        <div>
+            <span class="slds-align_absolute-center">
+                {!index + 1} : {!sym.Name}
+            </span>
+        </div>
+    </aura:iteration>
+</aura:component>

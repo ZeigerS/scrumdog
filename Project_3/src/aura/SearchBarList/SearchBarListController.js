@@ -20,5 +20,5 @@
     	else{
     		helper.addSymptom(component, event.getParam("newSymptom"));
     	}
-    },
+    }
 })
